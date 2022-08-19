@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Didrik Munther IT & Datakonsult AB">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Didrik Munther">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Didrik Munther IT & Datakonsult AB{{ title && ' - ' }}{{title}}</title>
+
+  <base href="/">
+
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129507579-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129507579-1');
+  </script> -->
+
+  <!-- <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script> -->
+  <!-- <link rel="preload" as="script" href="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"> -->
+
+  <link rel="stylesheet" href="./style.css?v={{ version }}">
+</head>
+
+<body class="bg-white flex flex-col">
+  <header>
+    {% include './header.html' %}
+    {% include './mobile-nav.html' %}
+  </header>
+  <main class="relative flex-auto">
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    {% include './footer.html' %}
+  </footer>
+
+  <script src="./script.js?v={{ version }}"></script>
+</body>
+
+</html>

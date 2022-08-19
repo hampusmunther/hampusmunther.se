@@ -1,0 +1,373 @@
+@tailwind base;
+
+.w-128 {
+    width: 28rem;
+}
+
+.h-128 {
+    height: 28rem; }
+
+.h-80 {
+    height: 22rem;
+}
+
+.max-h-xs {
+    max-height: 20rem;
+}
+
+.max-h-md {
+    max-height: 32rem;
+}
+
+.min-w-1 {
+    min-width: 1.2rem;
+}
+
+.dash-left {
+    position: relative; }
+.dash-left:after {
+    @apply w-4 absolute;
+    content: '';
+    height: 2px;
+    background: #183681;
+    left: -1.4rem;
+    top: 1.1rem;
+}
+
+.bg-gray-1000 {
+    background-color: #080e0e;
+}
+
+.h-calc-100-7 {
+    height: calc(100vh - 7rem);
+}
+
+.top-50 {
+    top: 50%;
+}
+
+.top-full {
+    top: 100%;
+}
+
+.right-50 {
+    right: 50%;
+}
+
+.right-4 {
+    right: 1rem;
+}
+
+.-translate-y-50 {
+    transform: translateY(-50%);
+}
+.translate-y-50 {
+    transform: translateY(50%);
+}
+.translate-50 {
+    transform: translate(50%);
+}
+
+.max-w-none {
+    max-width: none;
+}
+.max-h-100 {
+    max-height: 100%;
+}
+
+.-mb-4px {
+    margin-bottom: -4px;
+}
+
+.bottom-1 {
+    bottom: .75rem;
+}
+
+.right-full {
+    right: 100%;
+}
+.left-full {
+    left: 100%;
+}
+
+.flex-full {
+    flex: 0 0 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .lg\:flex-1\/2 {
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .xl\:flex-1\/3 {
+        flex: 0 0 33.333333%;
+    }
+}
+
+@keyframes author {
+    0% {
+        opacity: 0;
+        transform: translateX(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.author-date .author,
+.author-date .date {
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    opacity: 0;
+}
+.author-date .author {
+    transform: translateX(25%);
+}
+.author-date:hover .author {
+    opacity: 1;
+    transform: translateX(0);
+}
+.author-date .date {
+    transform: translateX(-25%);
+}
+.author-date:hover .date {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.h1-title {
+    @apply text-6xl font-bold text-gray-800;
+}
+
+.form-input {
+    @apply bg-transparent outline-none border-b border-gray-100 mr-4 py-3 text-gray-100 w-full rounded-none;
+}
+
+.form-input::placeholder,
+.form-text-area::placeholder {
+    @apply text-gray-400;
+}
+
+.form-text-area {
+    @apply form-input border;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.blog {
+    @apply text-lg; }
+.blog > * {
+    @apply mb-6; }
+.blog h2 {
+    @apply text-4xl font-bold mb-1; }
+.blog pre {
+    padding: 5px;
+    color: #e5eff5;
+    background: #0e1012; }
+
+
+@keyframes mobileActive {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes mobileInactive {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+}
+
+#mobile-nav-wrapper {
+    transform: translateY(20%);
+    opacity: 0; }
+#mobile-nav-wrapper.active {
+    animation: mobileActive .3s ease-in-out forwards; }
+#mobile-nav-wrapper.inactive {
+    animation: mobileInactive .3s ease-in-out forwards; }
+
+.post .post-bg {
+    opacity: .6;
+    transition: opacity .3s ease-in-out; }
+.post:hover .post-bg {
+    opacity: .3; }
+
+.link {
+    @apply text-blue-700; }
+.link:hover {
+    @apply underline;
+}
+
+/* .image-before:before {
+    content: '';
+    background-image: url('./static/didrik.jpg');
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-size: cover;
+    border-radius: 3px;
+    margin-right: 8px;
+} */
+
+.paragraphs > p {
+    @apply mb-4;
+}
+
+.paragraphs > p > a {
+    @apply link;
+}
+
+.paragraphs > p > a:hover {
+    @apply underline;
+}
+
+@media (min-width: 768px) {
+    .md\:right-4 {
+        right: 1rem;
+    }
+
+    .md\:right-0 {
+        right: 0;
+    }
+}
+
+.dropdown > ul {
+    @apply hidden;
+}
+
+.dropdown:hover > ul {
+    @apply block;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (min-width: 768px) {
+    .md\:h-128 {
+        height: 28rem;
+    }
+}
+
+.shadow {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+@keyframes miniLogoRight {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes miniLogoLeft {
+    0% {
+        opacity: 0;
+        /* transform: translateX(-40px); */
+    }
+    100% {
+        opacity: 1;
+        /* transform: translateX(0px); */
+    }
+}
+
+@keyframes miniLogoBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#main-icon-inner:not(.no-animation) > .cls-1 {
+    opacity: 0;
+    animation: .5s miniLogoLeft ease-in-out forwards;
+    animation-delay: .8s;
+}
+
+#main-icon-inner:not(.no-animation) > .cls-2 {
+    opacity: 0;
+    animation: .5s miniLogoRight ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+#main-icon-inner:not(.no-animation) > .cls-3 {
+    opacity: 0;
+    animation: .5s miniLogoBottom ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: .7s fade-in ease-in-out forwards;
+    animation-delay: .1s;
+}
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ *  Integrity: sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN
+ */
+ @font-face {
+	font-family: 'FontAwesome';
+	src: url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');
+	src: url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+    font-display: swap;
+}
+
+.fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+.fa-phone:before {
+	content: "\f095"
+}
+.fa-envelope:before {
+	content: "\f0e0"
+}
+.fa-user:before {
+	content: "\f007"
+}
+.fa-linkedin:before {
+	content: "\f0e1"
+}
+.fa-github:before {
+	content: "\f09b"
+}
+.fa-bars:before {
+	content: "\f0c9"
+}

@@ -1,0 +1,14 @@
+languages:
+  se:
+    name: 'Svenska'
+    domain: null
+    img: './static/flag/se.svg'
+  en:
+    name: 'English'
+    domain: en
+    img: './static/flag/gb.svg'
+  de:
+    name: 'Deutsch'
+    domain: de
+    img: './static/flag/de.svg'
+    hidden: true

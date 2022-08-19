@@ -1,0 +1,51 @@
+{% extends './page.html' %}
+{% block content %}
+<div class="{{footerColor}} pb-4">
+    <svg
+        class="w-full absolute top-0 left-0 h-128"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        viewBox="0 0 487 83.98">
+        <polygon fill="white" points="0 0 0 2.98 0 83.98 486.98 2.98 487 2.98 487 0 0 0">
+        </polygon>
+    </svg>
+
+    <div class="relative mx-2 md:w-7/12 md:mx-auto">
+        <h4 class="text-blue-400 text-center uppercase text-lg font-medium">{{date}}</h4>
+        <h1 class="text-4xl md:text-6xl h1-title text-center mb-10">{{postTitle}}</h1>
+    
+        <div class="shadow rounded-sm overflow-hidden bg-white">
+            <div class="flex justify-center items-start relative">
+                <div class="overflow-hidden w-full h-64 md:h-128">
+                    <div class="jarallax w-full h-full" data-jarallax data-speed="0.2" data-img-position="0% 0%" data-img-size="cover">
+                        <img
+                            class="jarallax-img"
+                            src="{{coverImg}}"
+                            alt="{{title}}">
+                    </div>
+                </div>
+                <div class="px-8 xl:px-32 w-full absolute bottom-0 translate-y-50">
+                    <div class="author-date -ml-6 left-0">
+                        <div class="relative inline-block cursor-pointer hover:border-blue-100">
+                            <div class="text-xs absolute whitespace-no-wrap bottom-1 ml-2 right-full uppercase tracking-wide font-medium author text-red-700 left-full">{{author}}</div>
+                            <div class="text-xs absolute whitespace-no-wrap bottom-0 ml-2 left-full uppercase tracking-wide font-medium date text-gray-600">{{date}}</div>
+                            <img
+                                class="h-20 rounded-full border-4 border-white"
+                                src="{{authorImg}}"
+                                alt="{{author}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="blog py-16 px-8 xl:py-24 xl:px-32">
+                <!-- <div class="jarallax" data-jarallax data-speed="0.2">
+                    <img class="jarallax-img" src="{{coverImg}}" alt="">
+                </div> -->
+
+                {% block post %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

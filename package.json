@@ -1,0 +1,79 @@
+{
+  "name": "didrik.tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "build": {},
+    "build-style": {
+      "patterns": [
+        "src/style"
+      ],
+      "extensions": "css",
+      "runOnChangeOnly": true
+    },
+    "build-script": {
+      "patterns": [
+        "src/script"
+      ],
+      "extensions": "js",
+      "runOnChangeOnly": true
+    },
+    "generate-static": {
+      "patterns": [
+        "src/**"
+      ],
+      "extensions": "html,yaml,json,md,js",
+      "runOnChangeOnly": true
+    },
+    "copy-static": {
+      "patterns": [
+        "./static",
+        "./meta"
+      ],
+      "extensions": "*",
+      "runOnChangeOnly": true
+    },
+    "build-md": {
+      "patterns": [
+        "./src/pages/blog-md"
+      ],
+      "extensions": "md",
+      "runOnChangeOnly": true
+    }
+  },
+  "scripts": {
+    "build-style": "postcss ./src/style/style.css -o ./out/style.css",
+    "build-script": "babel ./src/script -d ./out/",
+    "generate-static": "static-site -h ./src/helpers/*.js -b ./out -s ./src/html && cp ./out/404/index.html ./out/404.html",
+    "copy-static": "mkdir -p ./out/static && rimraf ./out/static/ && cp -r ./static ./out/static && cp -r ./meta/* ./out/",
+    "build-md": "rimraf ./src/pages/blog/* && ./markdown.sh",
+    "build": "rimraf ./out/* && npm run generate-static && npm run build-md && npm run copy-static && npm run build-style && npm run build-script && echo 'Successfully built!'",
+    "build-only-dynamic": "mkdir -p ./out && rimraf ./out/* && npm run generate-static && npm run build-md && echo 'Successfully built dynamic content!'",
+    "build-only-static": "mkdir -p ./out && rimraf ./out/* && npm run copy-static && npm run build-style && npm run build-script && echo 'Successfully built static content!'",
+    "deploy": "npm run build && rimraf ../dist/* && cp -r ./dist/* ../dist && echo 'Successfully deployed!'",
+    "watch": "npm-watch"
+  },
+  "author": "Didrik Munther",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "jarallax": "^1.12.0",
+    "tailwindcss": "^2.1.1",
+    "yaml": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-preset-minify": "^0.5.1",
+    "cssnano": "^4.1.11",
+    "npm-watch": "^0.6.0",
+    "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.0",
+    "showdown": "^1.9.1",
+    "showdown-icon": "^2.0.0",
+    "static-site": "^1.3.4",
+    "tailwind": "^4.0.0"
+  }
+}

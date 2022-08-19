@@ -1,0 +1,17 @@
+<div
+    id="mobile-nav-wrapper"
+    class="fixed top-0 left-0 w-full h-full z-40 hidden md:hidden">
+    <div
+        id="mobile-nav"
+        class="absolute mt-24 z-50 top-0 bg-gray-800 w-full h-full p-12 text-white uppercase tracking-wider text-lg text-white mobile-nav">
+        <ul>
+            {% for nav in nav.pages %}
+                <a href="{{nav.url}}">
+                    <li class="p-4 border-b-4 -mb-4px hover:border-gray-600 border-transparent {{isActivePage(nav.url) && 'border-gray-400' || null}}">
+                        {{nav.name}}
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

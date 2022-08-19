@@ -1,0 +1,30 @@
+<div class="{{footerColor}}">
+    <div class="w-4/5 m-auto flex flex-wrap pb-12 pt-12">
+        <svg
+            class="w-full absolute top-0 left-0 h-128"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+            viewBox="0 0 487 83.98">
+            <polygon fill="white" points="0 0 0 2.98 0 83.98 486.98 2.98 487 2.98 487 0 0 0"></polygon>
+        </svg>
+
+        {% for post in collections.posts %}
+        <div class="flex-full lg:flex-1/2 xl:flex-1/3 md:pr-12 mb-12">
+            <div class="shadow rounded-sm overflow-hidden post">
+                <a href="{{post.url}}">
+                    <div class="relative h-128 w-128 flex bg-black w-full">
+                        <div class="absolut top-0 bottom-0 bg-cover w-full h-full post-bg" style="background: url('{{post.coverImg}}'); background-size: cover;"></div>
+                        <!-- <img
+                            class="opacity-50 max-w-none max-h-100"
+                            src=""
+                            alt=""> -->
+                        <div class="absolute flex items-center justify-center top-0 right-0 w-full h-full">
+                            <h1 class="h1-title text-4xl text-gray-100 text-center">{{post.title}}</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

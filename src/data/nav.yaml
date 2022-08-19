@@ -1,0 +1,9 @@
+pages:
+  - id: 'home'
+    url: ''
+  - id: 'project'
+    url: '/projekt'
+  # - id: 'blog'
+  #   url: '/blog'
+  - id: 'contact'
+    url: '/kontakt'

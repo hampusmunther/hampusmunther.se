@@ -1,0 +1,30 @@
+<main>
+    <section class="m-auto py-40 relative bg-gray-800">
+      <svg
+        class="w-full absolute top-0 left-0 h-128"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        viewBox="0 0 487 83.98">
+        <polygon fill="#fdfdfd" points="0 0 0 2.98 0 83.98 486.98 2.98 487 2.98 487 0 0 0">
+        </polygon>
+      </svg>
+
+      {% for project in projects %}
+        <div class="flex flex-wrap relative w-4/5 mx-auto my-0 flex items-center md:mb-56 mb-32">
+          <div class="w-full z-10 md:w-1/2">
+            <img class="shadow rounded-sm" src="{{project.img}}" alt="{{project.title|safe}}" loading="lazy">
+          </div>
+          <div class="w-full md:z-20 md:w-1/2 p-12 bg-red-800 -m-12 text-white shadow rounded-sm">
+            <h1 class="leading-normal md:leading-normal text-2xl md:text-3xl mt-6 md:mt-0 md:text-5xl font-bold uppercase tracking-wider .break-word">{{project.title|safe}}</h1>
+            <hr class="my-5">
+            {% for paragraph in project.text %}
+            <p class="mb-4 text-lg tracking-wide">{{paragraph}}</p>
+            {% endfor %}
+            <a href="{{project.url}}" target="{{project.target}}">
+              <div class="mt-4 p-4 font-bold text-blue-700 bg-white inline-block">{{ translation.texts.project_show }}</div>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+</main>

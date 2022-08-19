@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/wolf/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/wolf/static/js/main.f0131101.chunk.js",
+    "main.js.map": "/wolf/static/js/main.f0131101.chunk.js.map",
+    "runtime-main.js": "/wolf/static/js/runtime-main.e08b6f1a.js",
+    "runtime-main.js.map": "/wolf/static/js/runtime-main.e08b6f1a.js.map",
+    "static/js/2.40fd5e09.chunk.js": "/wolf/static/js/2.40fd5e09.chunk.js",
+    "static/js/2.40fd5e09.chunk.js.map": "/wolf/static/js/2.40fd5e09.chunk.js.map",
+    "static/js/3.b016b1ca.chunk.js": "/wolf/static/js/3.b016b1ca.chunk.js",
+    "static/js/3.b016b1ca.chunk.js.map": "/wolf/static/js/3.b016b1ca.chunk.js.map",
+    "index.html": "/wolf/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/wolf/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.40fd5e09.chunk.js.LICENSE.txt": "/wolf/static/js/2.40fd5e09.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e08b6f1a.js",
+    "static/js/2.40fd5e09.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.f0131101.chunk.js"
+  ]
+}

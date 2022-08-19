@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flappy AI</title>
+
+    <base href="/flappy/">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="padding:20px;">
+        <a href="https://github.com/Malaxiz/flappyai"><h3>Link to the project on Github.</h3></a>
+    </div>
+    <div style="padding: 20px;">
+        <button id="speed-normal">Normal speed</button>
+        <button id="speed-super">Superspeed</button>
+        <label for="">
+            <input checked type="checkbox" id="auto-speed-super">
+            <span>Automatic superspeed</span>
+        </label>
+        <label for="">
+            <input checked type="checkbox" id="pause">
+            <span>Slow when highscore</span>
+        </label>
+        <br>
+        <button id="respawn">Respawn</button>
+        <button id="reset">Reset</button>
+        <label for="" title="Example:   2,2   3,5    6    100   ">
+            <span>Current network structure: </span>
+            <span id="active-structure"></span>
+            <input type="text" id="structure" value="2, 2">
+            <button id="set-structure">Set</button>
+        </label>
+    </div>
+    <script src="./static/app.bundle.js"></script>
+</body>
+</html>

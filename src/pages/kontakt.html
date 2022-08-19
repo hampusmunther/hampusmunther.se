@@ -1,0 +1,100 @@
+<main>
+    <section class="bg-blue-300 my-0 m-auto pt-24">
+        <svg
+            class="w-full absolute top-0 left-0 h-128"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+            viewBox="0 0 487 83.98">
+            <polygon fill="white" points="0 0 0 2.98 0 83.98 486.98 2.98 487 2.98 487 0 0 0">
+            </polygon>
+        </svg>
+
+        <div class="w-4/5 m-auto my-0">
+            <div class="flex flex-wrap md:flex-nowrap items-center justify-center w-full max-w-6xl relative z-10">
+                <div class="w-full md:w-1/2 md:mr-12">
+                    <img
+                        class="shadow rounded-sm"
+                        src="./static/computer.webp" alt="">
+                </div>
+                <div class="w-full md:w-1/2 text-gray-800 tracking-wider paragraphs">
+                    <h1 class="h1-title leading-normal lg:leading-normal normal-case text-5xl lg:text-6xl">{{ translation.texts.contact }}</h1>
+                    <hr class="w-16 border-gray-900 border mb-6">
+                    {{ translation.paragraphs.contact|safe }}
+                    <ul class="">
+                        <li><i class="fa fa-phone mr-2"></i><a class="hover:underline" href="tel:+46707335219">+46 70 73 35 219</a></li>
+                        <li><i class="fa fa-envelope mr-2"></i><a class="hover:underline" href="mailto:dmu0817@gmail.com">dmu0817@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-40 pb-24 overflow-hidden bg-blue-800 relative">
+        <svg
+            class="w-full absolute top-0 h-56 left-0"
+            aria-hidden="true"
+            preserveAspectRatio="none"
+            viewBox="0 0 487 83.98">
+            <polygon
+                fill="#90cdf4"
+                points="487 0 487 2.98 487 83.98 0.02 2.98 0 2.98 0 0 487 0">
+            </polygon>
+        </svg>
+    </section>
+
+    <section class="bg-blue-800">
+        <div class="w-4/5 my-0 mx-auto">
+            <h1 class="h1-title text-gray-100 normal-case">{{ translation.texts.contact_your_project }}</h1>
+            <div class="pb-24">
+                <form
+                    class="m-0"
+                    formtarget="_blank"
+                    action="https://formspree.io/mgeokvwv"
+                    method="POST">
+                    <div class="mb-6">
+                        <input
+                            class="form-input md:w-2/5"
+                            type="text"
+                            name="name"
+                            placeholder="{{ translation.texts.contact_your_name }}">
+                        <input
+                            class="form-input md:w-2/5"
+                            type="email"
+                            name="_email"
+                            placeholder="{{ translation.texts.contact_your_mail }}">
+                        <input
+                            class="form-input md:w-2/5"
+                            type="telno"
+                            name="_phone"
+                            placeholder="{{ translation.texts.contact_your_phone }}">
+                        <input
+                            class="form-input md:w-2/5"
+                            type="text"
+                            name="_company"
+                            placeholder="{{ translation.texts.contact_your_company }}">
+                    </div>
+
+                    <textarea
+                        class="form-text-area mb-6 p-3 w-full"
+                        name="_message"
+                        placeholder="{{ translation.texts.contact_tell_more }}"
+                        cols="30"
+                        rows="10"></textarea>
+
+                    <div class="mb-8">
+                        <input
+                            class="form-input md:w-2/5"
+                            type="text"
+                            name="_budget"
+                            placeholder="{{ translation.texts.contact_budget }}">
+                    </div>
+
+                    <input
+                        class="p-4 px-12 uppercase bg-gray-100 cursor-pointer hover:bg-gray-300"
+                        type="submit"
+                        value="{{ translation.texts.contact_send }}">
+                </form>
+            </div class="pb-24">
+        </div>
+    </section>
+</main>
