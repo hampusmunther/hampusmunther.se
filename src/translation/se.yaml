@@ -61,7 +61,7 @@ translation:
     rustlang:
       title: 'Eget&shy;utvecklat programmerings&shy;språk'
       text:
-        - 'Ett dynamiskt typat språk med stöd för aritmetik, funktioner och listor.'
+        - 'Ett statiskt typat och kompilerat språk med stöd för aritmetik, funktioner och listor.'
         - 'Projektet är byggt i Rust.'
     more:
       title: 'Mer projekt på GitHub'

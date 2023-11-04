@@ -55,12 +55,12 @@ projects:
       - The project is build in C++ with Lua as scripting language, and uses JSON to serialize.
 
   - title: 'Programming language'
-    id: 'rustlang'
+    id: 'rostlang'
     img: './static/rustlang.webp'
-    url: 'https://github.com/didrikmunther/rust-lang-2'
+    url: 'https://github.com/didrikmunther/rost'
     target: '_blank'
     text:
-      - A dynamically typed language with support for arithmetic, functions, and lists.
+      - A statically typed compiled language with support for arithmetic, functions, and lists.
       - The project is build in Rust with the Recursive Descent Parser.
 
   - title: 'More projects on GitHub'
